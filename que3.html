@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="que3.css">
+    <title>Students Card Generator</title>
+</head>
+
+<body>
+    <div class="back">
+        <form>
+            <h3>Please fill in the form</h3>
+            <label>Full Name</label>
+            <input type="text" id="inName" placeholder="">
+            <label>Date of Birth</label>
+            <input type="text" id="inBirth" placeholder="Birth">
+            <label>Field</label>
+            <input type="text" id="inField" placeholder="Field">
+            <label>Year</label>
+            <input type="number" id="inYear" placeholder="Year">
+            <label>Subscription number</label>
+            <input type="number" id="inNum" placeholder="sub n0">
+
+
+            <label for="file" class="upload">Upload an Image</label>
+            <br>
+            <span>Choose one that describes you perfectly</span>
+            <input type="file" id="file" accept="Image/*" onchange="loadImage(event)">
+        </form>
+
+        <button type="submit" id="preview">preview</button>
+        <div class="container">
+            
+            <canvas class="card" id="result">
+                <header id="head">
+                    <div class="camp">
+                        <h4>Campus Card</h4>
+                        <span>Undergraduates</span>
+                    </div>
+                    <img src="underg.jpg" id="logo" alt="">
+                </header>
+                
+                <div class="content">
+                    <img src="" id="imgDisplayed">
+                    <ul>
+                        <li id="name"></li>
+                        <li id="Birth"></li>
+                        <li id="FieldYear"></li>
+                        <li>SubN0 <span id="num"></span></li>
+                    </ul>
+
+                </div>
+
+
+            </canvas>
+            <button id="down">Download</button>
+        </div>
+    </div>
+    <script src="que3.js"></script>
+</body>
+
+</html>
